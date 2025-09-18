@@ -1,29 +1,105 @@
-.logo-container {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #f8f8f8 0%, #fdfdfd 100%);
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  color: #fff;
+}
+
+.container {
+  background: rgba(7, 0, 0, 0.411);
+  backdrop-filter: grayscale(2px);
+  padding: 40px 50px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 0 8px 32px rgba(5, 5, 5, 0.1);
+}
+
+.logo-container {
   margin-bottom: 20px;
 }
 
-.logo {
-  width: 120px;
+.logo-container img {
+  max-width: 120px;   /* ukuran maksimal logo */
   height: auto;
   margin-bottom: 10px;
-  border-radius: 12px;
 }
 
-.rekap-link {
-  display: inline-block;
-  margin-top: 10px;
-  color: #4dd0e1;
+h1 {
+  margin-bottom: 16px;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 24px;
+  font-size: 1.1em;
+  opacity: 0.9;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
   font-weight: 600;
-  text-decoration: none;
-  background: rgba(255,255,255,0.2);
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
+  text-align: left;
+  width: 100%;
 }
 
-.rekap-link:hover {
-  background: rgba(255,255,255,0.4);
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 16px;
+}
+
+button {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #e64a4a;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #d0ff6a;
+  min-height: 20px;
+}
+
+#location {
+  margin-top: 20px;
+  font-size: 0.95em;
+  opacity: 0.8;
+  padding-top: 15px;
+  border-top: 1px dashed #aaa;
+}
+
+#currentLocation {
+  font-weight: 700;
+  color: #080808;
 }
