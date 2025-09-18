@@ -64,7 +64,7 @@ form.addEventListener('submit', (e) => {
 
     // Kirim ke Google Apps Script Web App
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbxGXaP9E3FckUgGzDb-Y38LaDSJKV2tEtqiLIFP-Fg/exec", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbzoRfDfIHQxQc3W27bDsVqqntYrxLRhHtG82J9bguzjq9YzRe07s2T8_m8Le13KnR_w/exec", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -100,3 +100,4 @@ form.addEventListener('submit', (e) => {
   };
   reader.readAsDataURL(photoFile);
 });
+
