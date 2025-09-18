@@ -5,44 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>📊 Rekap Absensi MB.GBNU</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(10px);
-    }
-    th, td {
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 10px;
-      text-align: center;
-      color: #fff;
-    }
-    th {
-      background: rgba(0,0,0,0.3);
-    }
-    td img {
-      border-radius: 8px;
-    }
-    .download-btn, .back-btn {
-      margin-top: 20px;
-      background-color: #4cafef;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1em;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-weight: 600;
-      display: inline-block;
-      margin-right: 10px;
-    }
-    .download-btn:hover, .back-btn:hover {
-      background-color: #3699d8;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -60,7 +22,7 @@
     </table>
 
     <button class="download-btn" onclick="downloadJSON()">⬇️ Download JSON</button>
-    <a href="indeks.html" class="back-btn">⬅️ Kembali ke Absensi</a>
+    <a href="index.html" class="back-btn">⬅️ Kembali ke Absensi</a>
   </div>
 
   <script>
@@ -74,7 +36,7 @@
         const row = document.createElement("tr");
         row.innerHTML = `
           <td>${absen.nama}</td>
-          <td><img src="${absen.foto}" width="60"/></td>
+          <td><img src="${absen.foto}" width="60" style="border-radius:8px;"/></td>
           <td>${absen.lokasi}</td>
           <td>${absen.tanggal}</td>
         `;
