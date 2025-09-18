@@ -25,7 +25,7 @@
     td img {
       border-radius: 8px;
     }
-    .download-btn {
+    .download-btn, .back-btn {
       margin-top: 20px;
       background-color: #4cafef;
       color: white;
@@ -36,8 +36,10 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
       font-weight: 600;
+      display: inline-block;
+      margin-right: 10px;
     }
-    .download-btn:hover {
+    .download-btn:hover, .back-btn:hover {
       background-color: #3699d8;
     }
   </style>
@@ -58,6 +60,7 @@
     </table>
 
     <button class="download-btn" onclick="downloadJSON()">⬇️ Download JSON</button>
+    <a href="indeks.html" class="back-btn">⬅️ Kembali ke Absensi</a>
   </div>
 
   <script>
