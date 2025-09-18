@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📝 Absensi Marching Band Online</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎵 Marching Band Absensi Online 🎵</h1>
+    <p>Upload foto selfie kamu dengan latar belakang lokasi latihan!</p>
+
+    <form id="absensiForm">
+      <label for="name">Nama:</label>
+      <input type="text" id="name" required placeholder="Masukkan nama kamu" />
+
+      <label for="photo">Upload Foto Selfie (dengan lokasi terlihat):</label>
+      <input type="file" id="photo" accept="image/*" required />
+
+      <button type="submit">Submit Absensi</button>
+    </form>
+
+    <div id="status"></div>
+
+    <div id="location">
+      <p>Lokasi kamu saat ini: <span id="currentLocation">Memuat...</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
