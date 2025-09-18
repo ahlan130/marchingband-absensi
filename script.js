@@ -75,7 +75,16 @@ form.addEventListener('submit', (e) => {
         })
       });
 
-      const result = await response.json();
+      const raw = await response.text(); // baca raw response
+      console.log("Raw response dari server:", raw);
+
+      let result;
+      try {
+        result = JSON.parse(raw);
+      } catch (e) {
+        throw new Error("Respon bukan JSON. Mungkin Apps Script error halaman HTML login/izin.");
+      }
+
       if (result.error) {
         statusDiv.innerHTML = `<span style="color: #ff6b6b;">⚠️ Gagal menyimpan ke Google Sheet: ${result.error}</span>`;
       } else {
